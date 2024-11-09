@@ -8,6 +8,7 @@
     <!-- Slick Slider CSS -->
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body>
@@ -103,38 +104,44 @@
         Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
         Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
     </p>
-    <div class="slider-container">
-        <div class="slider">
-            <!-- Individual slide -->
-            <div><img src="https://preview.colorlib.com/theme/hepta/images/slider-1.jpg" alt="Slider Image 1"></div>
-            <div><img src="https://preview.colorlib.com/theme/hepta/images/slider-2.jpg" alt="Slider Image 2"></div>
-            <div><img src="https://preview.colorlib.com/theme/hepta/images/slider-2.jpg" alt="Slider Image 3"></div>
-            <div><img src="https://preview.colorlib.com/theme/hepta/images/slider-3.jpg" alt="Slider Image 4"></div>
-            <div><img src="https://preview.colorlib.com/theme/hepta/images/slider-6.jpg" alt="Slider Image 5"></div>
-            <div><img src="https://preview.colorlib.com/theme/hepta/images/slider-6.jpg" alt="Slider Image 6"></div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <img src="slider-1.jpg.webp" style="width:100%">
         </div>
-        
-    </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <img src="slider-2.jpg.webp" style="width:100%">
+           
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 5</div>
+            <img src="slider-3.jpg.webp" style="width:100%">
+           
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <img src="slider-4.jpg.webp" style="width:100%">
+            
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 5</div>
+            <img src="slider-5.jpg.webp" style="width:100%">
+            
+        </div>
 
-    
-    <!-- Initialize the Slick Slider -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
-    <!-- Slick JS (JavaScript) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('.slider').slick({
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            prevArrow: '<button type="button" class="slick-prev"><img src="icons/chevron-left.svg" alt="Previous"></button>',
-            nextArrow: '<button type="button" class="slick-next"><img src= alt="Next"></button>',
-        });
-    });
-</script>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    <script src="script.js"></script>
 <div class="blog">
     <h2>Recent Blog Post</h2>
     <p>
@@ -276,21 +283,22 @@
             </div>
             <div class="column">
                 <h3>Contact Info</h3>
-                <span>Address</span>
+                <h4>Address</h4>
                 <span>98 West 21st Street, Suite 721,</span>
                 <span>New York, NY 10016</span>
-                <span>Phone</span>
+                <h4>Phone</h4>
                 <span>(+1) 435 3533</span>
-                <span>Email</span>
+                <h4>Email</h4>
                 <span>info@yourdomain.com</span>
             </div>
             <div class="column">
     <h3>Subscribe</h3>
     <span>Sign up for our newsletter</span>
-    <div class="input-container">
-        <label for="email" class="input-label">Email</label>
-        <input type="email" id="email" placeholder="Enter email" class="email-input">
+    <div class="md-input">
+        <input type="text" required>
+        <label>Email</label>
     </div>
+    
 </div>
             <hr class="footer-line"> <!-- Underline at the end of the footer -->
     
@@ -301,8 +309,5 @@
 
     </div>
     
-
-
-
 </body>
 </html>
